@@ -21,7 +21,7 @@ header{
 }
 
 @keyframes float {
-    0% {
+    /* 0% {
       text-shadow: 3px 3px 5px rgba(2, 133, 113, 0.2);
       ;
       transform: translatey(0%);
@@ -41,12 +41,33 @@ header{
     100% {
       text-shadow: 3px 3px 5px rgba(2, 133, 113, 0.2);
       transform: translatey(0px);
-    }
+    } */
+    0% {
+        text-shadow: 3px 3px 5px rgb(255, 176, 59, .2);
+        ;
+        transform: translatey(0%);
+      }
+      25% {
+          text-shadow: 3px 3px 5px rgba(255, 176, 59, 0.6);
+          transform: translatey(5px);
+      }
+      50% {
+        text-shadow: 3px 13px 5px rgba(255, 176, 59, 0.7);
+        transform: translatey(0%);
+      }
+      75% {
+          text-shadow: 3px 13px 5px rgba(255, 176, 59, 0.7);
+          transform: translatey(-5px);
+        }
+      100% {
+        text-shadow: 3px 3px 5px rgba(255, 176, 59, 0.2);
+        transform: translatey(0px);
+      }
   }
 
   @media (prefers-reduced-motion){
     h1{
-        text-shadow: 3px 3px 5px rgba(2, 133, 113, 0.6);
+        text-shadow: 3px 3px 5px rgba(255, 176, 59, 0.6);
         animation: none;
     }
 }
@@ -228,7 +249,7 @@ main div:nth-child(even) img{
     border: 5px dashed rgb(70, 32, 70);
     border-radius: 100%;
 }
-#parallax{
+.important{
 display: none;
 }
 
@@ -311,21 +332,26 @@ div.about_grid div{
         align-items: center;
         padding: 0;
         margin: 0;
-        background-image: url("../images/historical_figures.gif");
-        background-attachment: fixed;
-        background-position: left;
-        background-size: contain;
-        background-repeat: no-repeat;
-        min-height: 100vh;
+    }
+
+    #important{
+        display: revert;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        grid-row: span 2;
+        width: 100%;
+
     }
     @media (prefers-reduced-motion){
         h1{
             text-shadow: 3px 3px 5px rgba(2, 133, 113, 0.6);
             animation: none;
         }
-            #intro_wrapper{
+            /* #intro_wrapper{
                 background-image: url("../images/lona-XmCMRPMO6lI-unsplash.jpg");
-            }
+            } */
     }
 
     #intro_wrapper p {
@@ -458,7 +484,16 @@ div.about_grid div{
     div.about_grid #dict {
         grid-column-start: 3;
     }
+    #intro_wrapper{
+        background-image: url("../images/historical_figures.gif"); 
+        background-attachment: fixed;
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+
+    }
+    #important{
+        display: none;
+    }
 }
-
-
-
