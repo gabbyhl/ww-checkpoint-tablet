@@ -249,7 +249,7 @@ main div:nth-child(even) img{
     border: 5px dashed rgb(70, 32, 70);
     border-radius: 100%;
 }
-.important{
+#important{
 display: none;
 }
 
