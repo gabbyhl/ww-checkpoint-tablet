@@ -231,7 +231,6 @@ a.skip{
     padding: 5px;
 }
 
-
 main div:nth-child(odd) img{
     display: block;
     margin: auto;
@@ -249,13 +248,17 @@ main div:nth-child(even) img{
     border: 5px dashed rgb(70, 32, 70);
     border-radius: 100%;
 }
+
 #important{
-display: none;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
 }
 
-main img{
+/* main img{
     min-width: 95%;
-}
+} */
 
 p{
     margin: 3% 0px 3% 0px
@@ -335,14 +338,9 @@ div.about_grid div{
     }
 
     #important{
-        display: revert;
-        border: none;
-        border-radius: 0;
         padding: 0;
         margin: 0;
         grid-row: span 2;
-        width: 100%;
-
     }
     @media (prefers-reduced-motion){
         h1{
@@ -462,6 +460,10 @@ div.about_grid div{
         margin-top: 2%;
     }
 
+    #important{
+        display: none;
+    }
+
     nav ul {
         align-content: space-around;
     }
@@ -480,7 +482,6 @@ div.about_grid div{
         grid-column-start: 2;
     }
 
-
     div.about_grid #dict {
         grid-column-start: 3;
     }
@@ -491,9 +492,5 @@ div.about_grid div{
         background-size: contain;
         background-repeat: no-repeat;
         min-height: 100vh;
-
-    }
-    #important{
-        display: none;
     }
 }
