@@ -493,4 +493,13 @@ div.about_grid div{
         background-repeat: no-repeat;
         min-height: 100vh;
     }
+    @media (prefers-reduced-motion){
+        h1{
+            text-shadow: 3px 3px 5px rgba(2, 133, 113, 0.6);
+            animation: none;
+        }
+        #intro_wrapper{
+            background-image: url("../images/lona-XmCMRPMO6lI-unsplash.jpg");
+            }
+    }
 }
