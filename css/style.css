@@ -235,7 +235,7 @@ main div:nth-child(odd) img{
     display: block;
     margin: auto;
     padding: 20px;
-    width: 20%;
+    width: 100%;
     border: 5px dotted rgb(45, 10, 75);
     border-radius: 100%;
 }
@@ -244,7 +244,7 @@ main div:nth-child(even) img{
     display: block;
     margin: auto;
     padding: 15px;
-    width: 20%;
+    width: 100%;
     border: 5px dashed rgb(70, 32, 70);
     border-radius: 100%;
 }
@@ -467,6 +467,14 @@ div.about_grid div{
     nav ul {
         align-content: space-around;
     }
+
+    /* main a:link{
+        color:blue;
+    }
+     main a:visited {
+        color:rgb(70, 32, 70);
+    } */
+
     .grid_people{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -501,5 +509,8 @@ div.about_grid div{
         #intro_wrapper{
             background-image: url("../images/lona-XmCMRPMO6lI-unsplash.jpg");
             }
+    }
+    main div img:hover {
+        background-color: rgb(32, 178, 170, .80);;
     }
 }
