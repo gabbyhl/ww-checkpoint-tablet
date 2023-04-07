@@ -524,6 +524,9 @@ div.about_grid div{
         #intro_wrapper{
             background-image: url("../images/lona-XmCMRPMO6lI-unsplash.jpg");
             }
+        #off {
+            display: hide;
+        }
     }
     main div img:hover {
         background-color: rgb(32, 178, 170, .80);;
