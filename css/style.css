@@ -1,6 +1,5 @@
 
 
-
 body{
     font-family: 'Roboto', sans-serif;
     padding-right: 5%;
@@ -16,8 +15,17 @@ a.skip{
     top: -200px;
 }
 
+a.skip:focus{
+    left: 0px;
+    top: 0px;
+}
+
 header{
     margin: 2%;
+}
+
+#off{
+    display: none;
 }
 
 @keyframes float {
@@ -122,7 +130,7 @@ dt {
     background-size: 100% 15%;
     background-repeat: repeat-x;
     background-position: left 0% bottom 5%;
-    background-image: repeating-linear-gradient(135deg, rgb(14, 187, 161) 0px, rgb(0, 121, 121) 45px,rgb(33, 197, 139) 45px, rgb(0, 121, 121) 76px,rgb(0, 121, 121) 76px, rgb(255, 253, 151) 114px,rgb(151, 187, 161) 114px, rgb(255, 253, 151) 127px,rgb(14, 187, 161) 127px, rgb(151, 187, 161) 139px,rgb(255, 253, 151) 139px, rgb(0, 121, 121) 170px);
+    background-image: repeating-linear-gradient(135deg, rgb(14, 187, 161) 0px, rgb(0, 121, 121) 45px, rgb(255, 253, 151) 45px, rgb(0, 121, 121) 76px,rgb(0, 121, 121) 76px, rgb(255, 253, 151) 114px,rgb(151, 187, 161) 114px, rgb(255, 253, 151) 127px,rgb(14, 187, 161) 127px, rgb(151, 187, 161) 139px,rgb(255, 253, 151) 139px, rgb(0, 121, 121) 170px);
 }
 
 .dictionary dd{
@@ -172,7 +180,7 @@ nav{
     text-align: center;
 }
 
-nav a{
+nav a {
     font-size: 100%;
     min-width: max-content;
     display: block;
@@ -186,7 +194,7 @@ nav ul {
     align-items: stretch;
     min-height: fit-content;
 }
-nav ul li{
+nav ul li {
     padding: 0%;
     margin-bottom: 1%;
     flex-basis: auto;
@@ -200,8 +208,27 @@ nav a:link {
     text-decoration: none;
 }
 
+button{
+    padding: 1%;
+    margin: 0% 10% 1% 90%;
+    border: 1px solid black;
+    background: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 70%;
+}
 
-nav a:active{
+button:hover{
+    padding: 1%;
+    margin: 0% 10% 1% 90%;
+    border: 1px solid black;
+    color: white;
+    background: rgb(70, 32, 70);
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav a:active {
     color: black;
     padding: 3%;
     text-decoration: none;
@@ -213,7 +240,7 @@ nav a:visited {
 }
 
 
-nav a:hover{
+nav a:hover {
     color: white;
     background-color: rgb(70, 32, 70);
     padding: 3%;
@@ -255,10 +282,6 @@ main div:nth-child(even) img{
     border: none;
     border-radius: 0;
 }
-
-/* main img{
-    min-width: 95%;
-} */
 
 p{
     margin: 3% 0px 3% 0px
@@ -328,7 +351,6 @@ div.about_grid div{
         font-size: 400%;
     }
 
-
     #intro_wrapper{
         display: grid;
         grid-template-columns: 1fr .75fr;
@@ -347,9 +369,6 @@ div.about_grid div{
             text-shadow: 3px 3px 5px rgba(2, 133, 113, 0.6);
             animation: none;
         }
-            /* #intro_wrapper{
-                background-image: url("../images/lona-XmCMRPMO6lI-unsplash.jpg");
-            } */
     }
 
     #intro_wrapper p {
@@ -439,7 +458,6 @@ div.about_grid div{
     }
 
     .grid_people > div{
-    /* border: 1px dotted black; */
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 3%;
@@ -460,7 +478,7 @@ div.about_grid div{
         margin-top: 2%;
     }
 
-    #important{
+    #important {
         display: none;
     }
 
@@ -468,13 +486,10 @@ div.about_grid div{
         align-content: space-around;
     }
 
-    /* main a:link{
-        color:blue;
+    #off{
+        display: block;
+        grid-column-start: 2;
     }
-     main a:visited {
-        color:rgb(70, 32, 70);
-    } */
-
     .grid_people{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -493,8 +508,8 @@ div.about_grid div{
     div.about_grid #dict {
         grid-column-start: 3;
     }
-    #intro_wrapper{
-        background-image: url("../images/historical_figures.gif"); 
+    #intro_wrapper.default {
+        background-image: url("../images/historical_figures.gif");
         background-attachment: fixed;
         background-position: left;
         background-size: contain;
@@ -512,5 +527,9 @@ div.about_grid div{
     }
     main div img:hover {
         background-color: rgb(32, 178, 170, .80);;
+    }
+
+    #intro_wrapper.no_gif{
+        background-image: url("../images/lona-XmCMRPMO6lI-unsplash.jpg");
     }
 }
